@@ -1,0 +1,439 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    background: #ffcbdb;
+
+}
+
+.banner {
+
+    position: relative;
+    width: 100%;
+    min-height: 31.25rem;
+    background: url(../img/banner.jpg);
+
+}
+
+header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.6rem 6.25rem;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    font-family: 'Crete Round', serif;
+
+}
+
+header.sticky{
+
+    background: #add8e6;
+    padding: 0.2rem 4rem;
+
+}
+
+header .logo{
+
+    color: #111;
+    font-size: 2em;
+    text-decoration: none;
+
+}
+
+header .logo span {
+
+    color: #ff7f50;
+
+}
+
+header .navegacao{
+
+    position: relative;
+    display: flex;
+
+}
+
+header .navegacao li{
+
+    list-style: none;
+    margin-left: 1.875rem;
+
+}
+
+header .navegacao li a{
+
+    color: #000;
+    text-decoration: none;
+    font-size: 1.3em;
+
+}
+
+header .navegacao li a:hover{
+
+    color: #ff7f50;
+
+}
+
+.conteudos{
+
+    text-align: center;
+
+}
+
+.conteudos .titulo{
+
+    padding: 1.6rem 3rem;
+
+}
+
+.conteudos .titulo h2{
+
+    font-size: 3.2em;
+    font-family: 'Crete Round', serif;
+
+}
+
+.conteudos .titulo h2 span{
+
+    color: #ff7f50;
+
+}
+
+.conteudos .caixas {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+
+}
+
+.conteudos .caixas .caixa{
+
+    width: 35rem;
+    margin: 0.205rem;
+
+}
+
+.conteudos .caixas .caixa .imgBx{
+
+    position: relative;
+    width: 100%;
+    height: 28.75rem;
+    
+}
+
+.conteudos .caixas .caixa .imgBx img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.3rem;
+
+}
+
+.conteudos .caixas .caixa .imgBx img:hover{
+
+    transform: scale(1.01);
+    transition: 0.7s;
+    border-radius: 0.7rem;
+
+}
+
+.conteudos .caixas .caixa .nameTag{
+
+    font-size: 1.8rem;
+
+}
+
+.conteudos .caixas .caixa .nameTag a{
+
+    color: #000;
+    text-decoration: none;
+
+}
+
+.conteudos .caixas .caixa .nameTag a:hover{
+
+    color: #ff7f50;
+
+}
+
+.conteudos .listas{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    align-items: center;
+
+}
+
+.conteudos .listas .lista{
+
+    width: 70%;
+    margin: 0.205rem;
+
+}
+
+.conteudos .listas .lista .imgBx{
+
+    position: relative;
+    width: 100%;
+    height: 19.75rem;
+
+}
+
+.conteudos .listas .lista .imgBx img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.3rem;
+
+}
+
+.conteudos .listas .lista .imgBx img:hover{
+
+    transform: scale(1.01);
+    transition: 0.7s;
+    border-radius: 0.7rem;
+
+}
+
+.row{
+
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 1rem 2rem;
+
+}
+
+.conteudos .listas .lista .row .col40{
+
+    position: relative;
+    width: 40%;
+
+}
+
+.conteudos .listas .lista .row .col60{
+
+    position: relative;
+    width: 60%;
+    padding: 0 4rem;
+
+}
+
+.conteudos .listas .lista .row .col60 h2{
+
+    font-size: 2.3em;
+
+}
+
+.conteudos .listas .lista .row .col60 p{
+
+    text-align: justify;
+    font-size: 1.5em;
+
+}
+
+.conteudos .listas .lista .row .col60 ul{
+
+    padding: 1rem 0;
+    text-align:justify;
+    font-size: 1.2em;
+
+}
+
+footer{
+
+    padding: 0.8rem 2.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #add8e6;
+    text-align: center;
+    color: #333;
+    font-size: 1.4em;
+
+}
+
+footer a{
+
+    color: #ff7f50;
+    text-decoration: none;
+
+}
+
+@media (max-width: 991px) {
+
+    header, header.sticky{
+
+        padding: 1.325rem 1.25rem;
+
+    }
+
+    header .navegacao{
+
+        display: none;
+
+    }
+
+    header .logo{
+
+        font-size: 2.9rem;
+
+    }
+
+    header .navegacao.active{
+
+        width: 100%;
+        height: calc(100% - 4rem);
+        position: fixed;
+        top: 4.25rem;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #add8e6;
+
+    }
+
+    header .navegacao li{
+
+        margin-left: 0;
+
+    }
+
+    header .navegacao li a{
+
+        font-size: 2.8em;
+
+    }
+
+    .menuToggle{
+
+        position: relative;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: url(../img/menu.png);
+        background-size: 2.875rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        filter: invert(1);
+
+    }
+
+    .menuToggle.active{
+
+        background: url(../img/close.png);
+        background-size: 2.875rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: invert(1);
+
+    }
+    
+    .conteudos .caixas .caixa .imgBx{
+    
+        height: 30.75rem;
+        
+    }
+
+    .conteudos .caixas .caixa .nameTag{
+
+        font-size: 3.6rem;
+    
+    }
+
+    .conteudos .titulo h2{
+
+        font-size: 7.2em;
+    
+    }    
+
+    .conteudos .caixas .caixa{
+
+        width: 45rem;
+        margin-top: 0.95rem;
+    
+    }
+
+    .conteudos .listas{
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+        align-items: center;
+
+    }
+    
+    .conteudos .listas .lista{
+    
+        width: 100%;
+        margin: 0.205rem;
+    
+    }
+
+    .conteudos .listas .lista .imgBx{
+
+        position: relative;
+        width: 100%;
+        height: 29.75rem;
+    
+    }
+
+    .row{
+
+        position: relative;
+        width: 100%;
+        display: block;
+        padding: 1rem 2rem;
+    
+    }
+
+    .conteudos .listas .lista .row .col40{
+
+        width: 100%;
+    
+    }
+    
+    .conteudos .listas .lista .row .col60{
+    
+        width: 100%;
+    
+    }
+
+    footer{
+
+        padding: 1.4rem 2.5rem;
+        font-size: 2em;
+    
+    }
+
+}
